@@ -20,6 +20,7 @@ import com.empmanagement.empmanagement.model.Employee;
 @RestController
 public class EmployeeController {
      
+	
 	@Autowired 
 	private EmployeeRepository  employeeRepository;
 	
@@ -40,6 +41,11 @@ public class EmployeeController {
 	public Optional<Employee> getEmployeeDetailsById(@PathVariable Integer empId) {
 		
 		return employeeRepository.findById(empId);
+	}
+	@GetMapping("/getDupliacteEmployee")
+	public List<Employee> getDuplicateEmployee() {
+		
+		return employeeRepository.findAll();
 	}
 	
 	@DeleteMapping("/deleteEmployeeDetailsById/{empId}")

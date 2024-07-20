@@ -8,6 +8,6 @@ import com.empmanagement.empmanagement.model.Employee;
 
 
 @Repository 
-public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+public interface EmployeeRepository extends JpaRepository< Employee, Integer > {
       
 }
